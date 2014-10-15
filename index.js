@@ -9,6 +9,10 @@ app.get('/:name', function(req, res){
   res.render('greeting.ejs', { name: req.params.name });
 });
 
+app.get('*',function(req,res) {
+ res.send('HELLO WORLD');
+});
+
 app.listen(port, function(){
   console.log('listening on port ' + port);
 });
